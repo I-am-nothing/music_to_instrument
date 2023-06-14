@@ -1,0 +1,39 @@
+{
+  "use_gpu": true,
+  "generate_data": true,
+  "path": {
+    "youtube_audio": "C:\\music_to_instructment\\data\\audios\\data",
+    "output": "output"
+  },
+  "generate": {
+    "sample_rate": 8000,
+    "numbers_per_audio": 5,
+    "max_padding_seconds": 15,
+    "speed_range": 0.1,
+    "noise_amplitude": 0.05,
+    "seconds_per_segment": 1
+  },
+  "speed_resample_thread": {
+    "num_workers": 6,
+    "batch_size": 24
+  },
+  "dataset": {
+    "num_data": 350,
+    "test": 0.05,
+    "validation": 0.05,
+    "train_sample_rate": 2000,
+    "seconds_per_item": 2.5,
+    "push_seconds": 1,
+    "n_feats": 32,
+    "n_fft": 256
+  },
+  "train": {
+    "epochs": 50,
+    "num_workers": 18,
+    "batch_size": 6,
+    "hidden_size": 512,
+    "dropout": 0.1,
+    "num_layers": 5,
+    "learning_rate": 0.00001
+  }
+}
