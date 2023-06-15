@@ -58,7 +58,6 @@ class Annotater(nn.Module):
 
     def init_hidden(self, batch_size):
         n, hs = self.num_layers, self.hidden_size
-
         return torch.zeros(n * 2, batch_size, hs), torch.zeros(n * 2, batch_size, hs)
 
     def forward(self, x1, x2, hidden):

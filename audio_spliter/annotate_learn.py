@@ -45,13 +45,22 @@ class AnnotateDataModule(pl.LightningDataModule):
         )
 
     def train_dataloader(self):
-        return DataLoader(self.annotate_train, batch_size=self.batch_size, num_workers=self.num_workers, collate_fn=collect_fn)
+        return DataLoader(
+            self.annotate_train, batch_size=self.batch_size,
+            num_workers=self.num_workers, collate_fn=collect_fn
+        )
 
     def val_dataloader(self):
-        return DataLoader(self.annotate_valid, batch_size=self.batch_size, num_workers=self.num_workers, collate_fn=collect_fn)
+        return DataLoader(
+            self.annotate_valid, batch_size=self.batch_size,
+            num_workers=self.num_workers, collate_fn=collect_fn
+        )
 
     def test_dataloader(self):
-        return DataLoader(self.annotate_test, batch_size=self.batch_size, num_workers=self.num_workers, collate_fn=collect_fn)
+        return DataLoader(
+            self.annotate_test, batch_size=self.batch_size,
+            num_workers=self.num_workers, collate_fn=collect_fn
+        )
 
 
 class AnnotateModule(pl.LightningModule):

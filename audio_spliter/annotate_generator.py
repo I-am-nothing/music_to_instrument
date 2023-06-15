@@ -13,8 +13,8 @@ from torchaudio.transforms import Resample, TimeStretch
 import os
 import subprocess
 
-AUDIO_TEST_ORIGINAL_ID = "-pHfPJGatgE"
-AUDIO_TEST_COVER_ID = "w-tYngyVXLM"
+# AUDIO_TEST_ORIGINAL_ID = "-pHfPJGatgE"
+# AUDIO_TEST_COVER_ID = "w-tYngyVXLM"
 
 
 class AudioAnnotateGenerator:
